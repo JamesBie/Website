@@ -1,0 +1,20 @@
+body {
+	background:grey ;
+}
+
+.comments {
+	background:lightgrey;
+}
+
+.card img {
+
+}
+
+#delete-form{
+	display:inline;
+}
+
+.delete-form{
+	display:inline;
+}
+
