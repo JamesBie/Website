@@ -34,7 +34,7 @@
 
             <% if (!currentUser){ %>
       			<li class="nav-item active">
-      				<a class= "nav-link" href = "/profile" > Login <span class= "sr-only" > (current)</span></a>
+      				<a class= "nav-link" href = "/login" > Login <span class= "sr-only" > (current)</span></a>
       			</li>
       			<li class="nav-item active">
       				<a class= "nav-link" href = "/register" > Sign up <span class= "sr-only" > (current)</span></a>
@@ -43,7 +43,7 @@
 
 
       			<li class = "nav-item active">
-              <a class= "nav-link" href = "/" > Signed in as <b><%= currentUser.username%></b> <span class= "sr-only" > (current)</span></a>
+              <a class= "nav-link" href = "/profile" > Signed in as <b><%= currentUser.username%></b> <span class= "sr-only" > (current)</span></a>
             </li>
 
             <li class = "nav-item active">

@@ -33,8 +33,12 @@ router.get("/register",function(req,res){
 
 //handle registration logic
 router.post("/register",function(req,res){
-	var newUser = new User({username: req.body.username});
-	User.register(newUser, req.body.password, function (err, user){
+	var newUser = new User({username: req.body.username , image :"none", email: req.body.email, role: "member" });
+	console.log(req.body);
+	User.register(newUser,
+		
+		req.body.password, 
+		function (err, user){
 		if (err){
 			req.flash("error", err.message);
 			return res.redirect("register"); //short circuits out of the function and redirects us to register page

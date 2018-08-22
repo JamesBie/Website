@@ -14,6 +14,7 @@ var express			=require("express"),
 
 //routes
 var indexRoutes		= require ("./routes/index")
+var exerciseRoutes	= require ("./routes/exercises")
 
 mongoose.connect("mongodb://localhost/crossfit");
 
@@ -30,7 +31,7 @@ app.use(flash());
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
-    secret: "Once again Rusty wins cutest dog!",
+    secret: "best exercises are here!!",
     resave: false,
     saveUninitialized: false
 }));
@@ -48,6 +49,7 @@ app.use(function(req, res, next){
 });
 
 app.use("/", indexRoutes);
+app.use("/exercises", exerciseRoutes);
 
 
 

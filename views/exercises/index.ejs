@@ -1,0 +1,49 @@
+
+<% include ../partials/header %>
+
+<div class = "container">
+	<header class= "jumbotron">
+		<div class = "container">
+			<h1> Add Exercises </h1>
+			 
+			<p>
+				<a href = "/exercises/new" class= "btn btn-primary btn-large"> Add New Exercises </a>
+			</p>
+			</div>
+			
+	 </header>
+
+	 <div class= "row">
+	 	<div class = "col-lg-12">
+	 		<h3> List of Exercises </h3>
+
+
+	 	</div>
+
+
+	 </div>
+
+
+
+													 <div class = "row text-center" >
+													<% exercises.forEach(function(exercise){ %>
+														
+														<div class = "col-lg-4 col-md-3  col-sm-6 mb-4">
+
+															<div class="card">
+												  				<img class="card-img-top" src="<%= exercise.image %>" alt="<%= exercise.name %>">
+												  				<div class="card-body">
+												    				<h5 class="card-title"><%= exercise.name %></h5>
+												   					 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+												   					 <a href="/exercises/<%= exercise._id %>" class="btn btn-primary">More Info</a>
+																 </div>
+															</div>
+
+
+														</div>
+
+													<% }); %>
+													</div>  
+</div>
+
+<% include ../partials/footer %>
