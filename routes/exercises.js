@@ -28,7 +28,6 @@ router.get("/new", function(req,res){
 
 });
 
-
 //create new exercises to database
 router.post("/", function(req,res){
 

@@ -15,6 +15,8 @@ var express			=require("express"),
 //routes
 var indexRoutes		= require ("./routes/index")
 var exerciseRoutes	= require ("./routes/exercises")
+var eventRoutes     = require ("./routes/events")
+var contactRoutes   = require ("./routes/contact")
 
 mongoose.connect("mongodb://localhost/crossfit");
 
@@ -50,6 +52,8 @@ app.use(function(req, res, next){
 
 app.use("/", indexRoutes);
 app.use("/exercises", exerciseRoutes);
+app.use("/events", eventRoutes);
+app.use("/contact", contactRoutes);
 
 
 
