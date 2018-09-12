@@ -8,7 +8,7 @@ var router 		= express.Router();
 router.get("/", function(req,res){
 	//get exercises from DB
 
-	res.render("contact");
+	res.render("contact/index");
 	
 });
 
